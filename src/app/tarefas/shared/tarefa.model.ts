@@ -3,6 +3,7 @@ export interface Tarefa {
     name:string;
 }
 
+//GET Tarefas
 export interface ResponseTarefas {
     tarefas: Tarefa[];
 }

@@ -10,7 +10,7 @@ export class TarefaService {
 
   constructor(private http: HttpClient) { }
 
-  private readonly API = 'http://localhost:3000/tasks';
+  private readonly API = 'http://localhost:3000/tarefas';
 
   getTarefas() {
     return this.http.get<ResponseTarefas[]>(this.API);
