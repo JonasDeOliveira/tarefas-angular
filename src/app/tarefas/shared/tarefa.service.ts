@@ -15,5 +15,9 @@ export class TarefaService {
   getTarefas() {
     return this.http.get<ResponseTarefas[]>(this.API);
   }
+
+  createTarefa(request: Tarefa): Observable<Tarefa> {
+      return this.http.post<Tarefa>(this.API, request);
+  }
   
 }

@@ -1,12 +1,32 @@
 {
-    "tarefas": [
-      {
-        "id": 1,
-        "name": "Lavar Roupas"
-      },
-      {
-        "id": 4,
-        "name": "Estudar Java OO"
-      }
-    ]
-  }
+  "tarefas": [
+    {
+      "id": 1,
+      "name": "Lavar Roupas"
+    },
+    {
+      "id": 4,
+      "name": "Estudar Java OO"
+    },
+    {
+      "id": 5,
+      "name": "Lavar Roupa"
+    },
+    {
+      "id": 6,
+      "name": "Estudar Angular"
+    },
+    {
+      "id": 7,
+      "name": "Estudar Spring"
+    },
+    {
+      "id": 8,
+      "name": "Estudar Banco de dados"
+    },
+    {
+      "id": 9,
+      "name": "Estudar Lógica de programação"
+    }
+  ]
+}
