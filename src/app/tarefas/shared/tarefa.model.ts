@@ -7,3 +7,8 @@ export interface Tarefa {
 export interface ResponseTarefas {
     tarefas: Tarefa[];
 }
+
+//GET Tarefa
+export interface ResponseTarefa {
+    data: Tarefa
+}

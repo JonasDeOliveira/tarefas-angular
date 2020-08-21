@@ -1,9 +1,9 @@
-<h1>Cadastrar tarefa</h1>
+<h1>Editar tarefa</h1>
 
 <div class="well">
   <form #formTarefa="ngForm">
     <div class="form-group">
-      <label for="name">Tarefa:</label>
+      <label for="nome">Tarefa:</label>
       <input 
         type="text"
         class="form-control"
@@ -12,25 +12,24 @@
         [(ngModel)]="request.name"
         #name="ngModel"
         minlength="5"
-        required> 
-        <div *ngIf="name.errors && name.dirty"
+        required
+        [class.is-invalid]="name.errors"> 
+      <div *ngIf="name.errors && (name.dirty)"
            class="alert alert-danger">
-            <div [hidden]="!name.errors.required">
-                Digite a tarefa.
-            </div>
-            <div [hidden]="!name.errors.minlength">
-                A tarefa deve conter ao menos 5 caracteres.
-            </div>
+        <div [hidden]="!name.errors.required">
+          Digite a tarefa.
         </div>
+        <div [hidden]="!name.errors.minlength">
+          A tarefa deve conter ao menos 5 caracteres.
+        </div>
+      </div>
     </div>
     <div class="form-group text-center">
       <input 
         type="submit"
-        class="btn btn-success" 
-        (click)="register()"
-        value="Cadastrar"
-        [disabled]="formTarefa.form.invalid"
-       >
+        class="btn btn-success"
+        (click)="update()"
+        value="Atualizar">
       <a [routerLink]="['/tarefas']"
         class="btn btn-default">
         <span class="glyphicon glyphicon-chevron-left" 
