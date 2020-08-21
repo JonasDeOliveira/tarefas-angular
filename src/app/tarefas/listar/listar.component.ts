@@ -21,4 +21,11 @@ export class ListarComponent implements OnInit {
     this.tarefaService.getTarefas().subscribe(response => this.responseTarefas = response);
   }
 
+  remover(id: string, nome: string) {
+    if (confirm(`Deseja remover a tarefa ${nome}?`)) {
+      this.tarefaService.deleteTarefa(id).subscribe();
+      this.listarTodas();
+    }
+  }
+
 }

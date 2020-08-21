@@ -31,5 +31,11 @@ export class TarefaService {
 
     return this.http.put<Tarefa>(URL, request);
   }
+
+  deleteTarefa(id: any): Observable<any> {
+    const URL = `${this.API}/${id}`;
+
+    return this.http.delete<any>(URL);
+  }
   
 }
